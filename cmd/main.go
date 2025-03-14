@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"bitbucket.org/Amartha/go-dlq-retrier/internal/handler"
-	"bitbucket.org/Amartha/go-dlq-retrier/internal/health"
+	"bitbucket.org/Amartha/go-dlq-retrier/internal/handler/health"
 	server "bitbucket.org/Amartha/go-dlq-retrier/internal/http"
 )
 

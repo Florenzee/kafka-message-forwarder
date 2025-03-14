@@ -5,8 +5,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	hHealth "bitbucket.org/Amartha/go-dlq-retrier/internal/http/handler/health"
 	"github.com/labstack/echo/v4"
+
+	"bitbucket.org/Amartha/go-dlq-retrier/internal/handler/health"
 )
 
 func TestGet_Handle(t *testing.T) {
@@ -14,12 +15,12 @@ func TestGet_Handle(t *testing.T) {
 
 	tests := []struct {
 		name    string
-		get     *hHealth.Get
+		get     *health.Get
 		wantErr bool
 	}{
 		{
 			name:    "success",
-			get:     hHealth.NewGet(),
+			get:     health.NewGet(),
 			wantErr: false,
 		},
 	}
