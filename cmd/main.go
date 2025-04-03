@@ -24,10 +24,10 @@ func main() {
 	}
 
 	// Ambil data dari environment
-	broker := os.Getenv("brokerKafka")
-	source := os.Getenv("sourceTopic")
-	ID := os.Getenv("groupID")
-	destination := os.Getenv("destinationTopic")
+	broker := os.Getenv("KAFKA_BROKER")
+	source := os.Getenv("KAFKA_SOURECE_TOPIC")
+	ID := os.Getenv("KAFKA_GROUP_ID")
+	destination := os.Getenv("KAFKA_DESTINATION_TOPIC")
 
 	// Shutdown signal
 	appContext, cancel := signal.NotifyContext(context.Background(), os.Interrupt, os.Kill, syscall.SIGTERM)
